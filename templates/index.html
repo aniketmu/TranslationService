@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css')}}">
+    <title>Transaltion Service</title>
 </head>
 <body>
-    <div>
-        <h1>Translation Service</h1>
+    <div class="container">
+        <div class="title">
+            <h1>Translation Service</h1>
+        </div>
         <form action="/translate" method="POST">
-            <input placeholder="Enter text" type="text" name="text">
+            <textarea placeholder="Enter text" type="text" name="text"></textarea>
             <select name="language">
                 <option value="en">English</option>
                 <option value="fr">French</option>

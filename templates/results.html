@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style.css')}}"
+    />
+    <title>Transaltion Service Results</title>
+  </head>
+  <body>
+    <div class="result-container">
+      <div class="title">
         <h1>Results</h1>
-        <p>{{original_text}}</p>
-        <p>{{translated_text}}</p>
-        <p>{{language}}</p>
+      </div>
+      <div class="results">
+        <p>
+          <b>Original Text</b>: {{original_text}}
+        </p>
+        <p>
+          <b>Translated Text</b>: {{translated_text}}
+        </p>
+        <p><b>Language</b>: {{language}}</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
